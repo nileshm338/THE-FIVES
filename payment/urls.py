@@ -1,6 +1,7 @@
 from django.urls import path
+from .views import home1, success
 
-from payment import views
-
-urlpatterns = [ path('initiate_payment',views.initiate_payment,name="initiate_payment"),
-                path('<str:ref>/',views.verify_payment,name="verify_payment"), ]
+urlpatterns = [
+    path('payment/', home1, name='home1'),
+     path('payment/success' , success , name='success')
+]
