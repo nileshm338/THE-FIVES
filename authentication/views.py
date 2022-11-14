@@ -4,7 +4,6 @@ from django.contrib.auth.hashers import make_password, check_password
 from django.contrib import messages
 
 
-# mesages.info(request,'mail taken')
 def user_login(request):
     if request.session.get('username', None) and request.session.get('type', None) == 'customer':
         return redirect('user_dashboard')
